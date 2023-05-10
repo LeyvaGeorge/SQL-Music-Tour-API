@@ -7,6 +7,9 @@ require('dotenv').config()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
+
+const { Sequelize } = require('sequelize')
+
 // ROOT
 app.get('/', (req, res) => {
     res.status(200).json({
