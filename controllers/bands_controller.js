@@ -64,11 +64,11 @@ bands.post('/', async (req, res) => {
 })
 
 // UPDATE A BAND
-bands.put('/:id', async (req, res) => {
+bands.put('/:name', async (req, res) => {
     try {
         const updatedBands = await Band.update(req.body, {
             where: {
-                band_id: req.params.id
+                name: req.params.name
             }
         })
         res.status(200).json({
@@ -80,11 +80,11 @@ bands.put('/:id', async (req, res) => {
 })
 
 // DELETE A BAND
-bands.delete('/:id', async (req, res) => {
+bands.delete('/:name', async (req, res) => {
     try {
         const deletedBands = await Band.destroy({
             where: {
-                band_id: req.params.id
+                name: req.params.name
             }
         })
         res.status(200).json({
