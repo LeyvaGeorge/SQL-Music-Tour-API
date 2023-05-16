@@ -33,6 +33,14 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
+    event_id: {
+       type: DataTypes.INTEGER,
+       allowNull: false 
+    },
+    stage_id: {
+       type: DataTypes.INTEGER,
+       allowNull: false   
+    },
     start_time: {
       type: DataTypes.DATE,
       allowNull: false
